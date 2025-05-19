@@ -23,16 +23,10 @@ API sederhana untuk integrasi Midtrans payment gateway menggunakan Node.js, Type
 
 ---
 
-### Generate Prisma Client
+### Jalankan migrasi database
 
 ```bash
-npx prisma generate
-```
-
-### Jalankan migrasi
-
-```bash
-npx prisma migrate dev --name init
+npm run migrate
 ```
 
 ---
