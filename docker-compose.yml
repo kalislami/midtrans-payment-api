@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: midtrans-payment-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./database:/app/database  # menyimpan file sqlite agar persistent
+    environment:
+      NODE_ENV: production
+      MIDTRANS_SERVER_KEY: ${MIDTRANS_SERVER_KEY}
+      MIDTRANS_CLIENT_KEY: ${MIDTRANS_CLIENT_KEY}
+      MIDTRANS_ENV: ${MIDTRANS_ENV}
+      MIDTRANS_CALLBACK_URL: ${MIDTRANS_CALLBACK_URL}
+    command: npm run start
