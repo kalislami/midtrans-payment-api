@@ -3,3 +3,7 @@ npm-debug.log
 Dockerfile
 docker-compose.yml
 dist
+.env
+*.sqlite
+database
+tests

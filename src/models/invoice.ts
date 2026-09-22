@@ -12,13 +12,16 @@ Invoice.init({
   orderId: {
     type: DataTypes.STRING,
     allowNull: false,
+    unique: true,
   },
   grossAmount: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    validate: { min: 1 },
   },
   status: {
     type: DataTypes.STRING,
+    allowNull: false,
     defaultValue: 'pending',
   },
 }, {
